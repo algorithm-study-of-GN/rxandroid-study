@@ -9,15 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -94,54 +89,6 @@ public class MainActivity extends AppCompatActivity {
             disposable.dispose();
         }
         super.onDestroy();
-    }
-
-    private static class SearchAdapter extends RecyclerView.Adapter<SearchImageViewHolder> {
-
-        private List<SearchResult.SearchImage> images;
-
-        public SearchAdapter() {
-            images = new ArrayList<>();
-        }
-
-        @Override
-        public SearchImageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_image, parent, false);
-            return new SearchImageViewHolder(view);
-        }
-
-        @Override
-        public void onBindViewHolder(SearchImageViewHolder holder, int position) {
-            SearchResult.SearchImage item = getItem(position);
-            holder.tv.setText(item.title);
-        }
-
-        private SearchResult.SearchImage getItem(int position) {
-            return images.get(position);
-        }
-
-        @Override
-        public int getItemCount() {
-            return images.size();
-        }
-
-        public void add(SearchResult.SearchImage item) {
-            images.add(item);
-        }
-
-        public void clear() {
-            images.clear();
-        }
-    }
-
-    private static class SearchImageViewHolder extends RecyclerView.ViewHolder {
-
-        private final TextView tv;
-
-        public SearchImageViewHolder(View itemView) {
-            super(itemView);
-            tv = (TextView) itemView.findViewById(R.id.tv_item_image);
-        }
     }
 
 

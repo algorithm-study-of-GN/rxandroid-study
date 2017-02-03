@@ -1,1 +1,1 @@
-include ':app'
+include ':step2', ':step1'
