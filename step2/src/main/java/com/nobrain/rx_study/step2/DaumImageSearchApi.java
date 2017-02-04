@@ -1,4 +1,4 @@
-package com.nobrain.rx_study;
+package com.nobrain.rx_study.step2;
 
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;

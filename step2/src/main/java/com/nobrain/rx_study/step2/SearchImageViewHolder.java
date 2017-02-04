@@ -1,9 +1,11 @@
-package com.nobrain.rx_study;
+package com.nobrain.rx_study.step2;
 
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import com.nobrain.rx_study.R;
 
 class SearchImageViewHolder extends RecyclerView.ViewHolder {
 

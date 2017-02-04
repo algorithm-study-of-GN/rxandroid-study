@@ -1,4 +1,4 @@
-package com.nobrain.rx_study;
+package com.nobrain.rx_study.step2;
 
 
 import android.os.Bundle;
@@ -9,10 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.nobrain.rx_study.R;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
