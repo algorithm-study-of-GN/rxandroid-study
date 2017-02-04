@@ -22,6 +22,14 @@ public class MainActivity extends AppCompatActivity {
 
         tv = (TextView) findViewById(R.id.tv_main);
 
+        /*
+         * What to do
+         * from
+         * 1, 2, 3, 4, 5, 6,...
+         *
+         * to
+         * a, b, c, d, e, f,...
+         */
         List<Integer> datas = Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14);
         Observable.fromIterable(datas)
                 .map(new Function<Integer, Character>() {
